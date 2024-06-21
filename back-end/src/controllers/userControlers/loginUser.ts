@@ -14,15 +14,16 @@ export default async function loginUser(req: Request, res: Response) {
             where: [
                 { userUser: userUser },
                 { userCpf: userUser },
+                { userEmail: userUser }
             ]
         });
 
         if (!user) {
-            return res.status(404).json({ error: "Usuário não encontrado" });
+            return res.status(400).json({ error: "Usuário não encontrado" });
         }
 
         if (!bcrypt.compareSync(userPassword, user.userPassword)) {
-            return res.status(401).json({ error: "Senha inválida" });
+            return res.status(400).json({ error: "Senha inválida" });
         }
 
         const token = jwt.sign({ userId: user.userId }, process.env.SECRET, {
