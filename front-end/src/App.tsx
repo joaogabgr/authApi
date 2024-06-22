@@ -9,7 +9,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/auth" element={<Auth />} />
-          <Route path='/teste' element={<RequireAuth><PrivateComponent /></RequireAuth>} />
+          <Route path='/private' element={<RequireAuth><PrivateComponent /></RequireAuth>} />
         </Routes>
       </Router>
     </div>
