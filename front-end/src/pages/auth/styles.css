@@ -1,0 +1,42 @@
+section.formAuth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.formAuth form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .formAuth label {
+    font-weight: bold;
+  }
+
+  .formAuth input {
+    padding: 5px;
+  }
+
+  .formAuth button {
+    padding: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .formAuth p {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .hidden.formAuth {
+    display: none;
+  }
